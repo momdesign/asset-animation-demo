@@ -68,32 +68,36 @@
   margin: 0 auto;
 }
 
-.floor1 {
+.floor1,
+.floor2,
+.floor3,
+.floor4 {
   position: absolute;
-  max-width: 100%;
   left: 0;
+  width: 100%;
+}
+
+.floor1 {
   top: 0;
 }
 
 .floor2 {
-  position: absolute;
-  max-width: 100%;
-  left: 0;
-  top: 235px;
+  top: 150px;
 }
 
 .floor3 {
-  position: absolute;
-  max-width: 100%;
-  left: 0;
-  top: 290px;
+  top: 250px;
 }
 
 .floor4 {
-  position: absolute;
+  top: 340px;
+}
+
+.floorImg {
   max-width: 100%;
+  position: absolute;
+  top: 0;
   left: 0;
-  top: 380px;
 }
 
 .floorsSection {
