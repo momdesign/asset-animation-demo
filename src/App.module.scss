@@ -1,0 +1,62 @@
+.hero {
+  text-align: center;
+}
+
+.note {
+  font-weight: 700;
+  margin-top: 40px;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.title {
+  font-size: 114px;
+  line-height: 1;
+  max-width: 900px;
+  font-weight: 400;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.button {
+  background-color: white;
+  color: #006CBF;
+  border: none;
+  -webkit-appearance: none;
+  appearance: none;
+  font-size: 20px;
+  line-height: 1.6;
+  font-weight: 400;
+  font-family: inherit;
+  padding: 10px 20px;
+  margin-bottom: 80px;
+}
+
+.contentMock {
+  max-width: 1320px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+
+.scene {
+  position: relative;
+  min-height: 710px;
+  max-width: 1024px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.floor {
+  position: absolute;
+  max-width: 100%;
+  left: 0;
+  top: 0;
+}
