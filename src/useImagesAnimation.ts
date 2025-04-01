@@ -29,7 +29,9 @@ export function useImagesAnimation(
         const imgHeight = imgEl.clientHeight;
         const imgCenter = imgRect.top + window.scrollY + imgHeight / 2;
         const infoCenter = info.offsetTop + info.clientHeight / 2;
-        imgEl.style.transform = `translateY(${rangeMap(window.scrollY, start, end, 0, infoCenter - imgCenter, true)}px) scale(${rangeMap(window.scrollY, start, end, 1, 0.8, true)})`;
+        const y = rangeMap(window.scrollY, start, end, 0, infoCenter - imgCenter, true);
+        const scale = rangeMap(window.scrollY, start, end, 1, 0.8, true);
+        imgEl.style.transform = `translateY(${y}px) scale(${scale})`;
       });
       requestAnimationFrame(animate);
     };
@@ -37,6 +39,7 @@ export function useImagesAnimation(
     return () => {
       if (frame.current) {
         cancelAnimationFrame(frame.current);
+        frame.current = null;
       }
     };
   }, [items]);
