@@ -5,7 +5,7 @@ type Item = {
   infoRef: React.RefObject<HTMLDivElement | null>;
 }
 
-const ANIMATION_DURATION_PX = 700;
+const ANIMATION_DURATION_PX = 900;
 
 export function useImagesAnimation(
   parentRef: React.RefObject<HTMLDivElement | null>,
@@ -29,8 +29,7 @@ export function useImagesAnimation(
         const imgHeight = imgEl.clientHeight;
         const imgCenter = imgRect.top + window.scrollY + imgHeight / 2;
         const infoCenter = info.offsetTop + info.clientHeight / 2;
-        imgEl.dataset.shift = `${rangeMap(window.scrollY, start, end, 0, infoCenter - imgCenter, true)}px`;
-        imgEl.style.transform = `translateY(${rangeMap(window.scrollY, start, end, 0, infoCenter - imgCenter, true)}px)`;
+        imgEl.style.transform = `translateY(${rangeMap(window.scrollY, start, end, 0, infoCenter - imgCenter, true)}px) scale(${rangeMap(window.scrollY, start, end, 1, 0.8, true)})`;
       });
       requestAnimationFrame(animate);
     };
