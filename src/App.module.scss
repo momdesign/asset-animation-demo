@@ -46,17 +46,73 @@
   z-index: 1;
 }
 
-.scene {
+.sceneSection {
   position: relative;
-  min-height: 710px;
+  padding-top: 710px + 40px;
+}
+
+.sceneTrack {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.scene {
+  position: sticky;
+  height: 0; // required to make the sticky stop when the top of content meets the end of track, not the bottom
+  top: 0;
   max-width: 1024px;
   text-align: center;
   margin: 0 auto;
 }
 
-.floor {
+.floor1 {
   position: absolute;
   max-width: 100%;
   left: 0;
   top: 0;
+}
+
+.floor2 {
+  position: absolute;
+  max-width: 100%;
+  left: 0;
+  top: 235px;
+}
+
+.floor3 {
+  position: absolute;
+  max-width: 100%;
+  left: 0;
+  top: 290px;
+}
+
+.floor4 {
+  position: absolute;
+  max-width: 100%;
+  left: 0;
+  top: 380px;
+}
+
+.floorsSection {
+  margin-top: 54px;
+}
+
+.floorInfoItem {
+  max-width: 1200px;
+  margin: 0 auto;
+  border-top: 1px solid #fff;
+  padding-top: 80px;
+  padding-bottom: 120px;
+}
+
+.floorTitle {
+  font-size: 30px;
+  line-height: 1.1;
+}
+
+.floorDescription {
+  max-width: 280px;
 }
