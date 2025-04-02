@@ -55,16 +55,16 @@ function App() {
       <section className={styles.sceneSection}>
         <div className={styles.sceneTrack}>
           <div className={styles.scene}>
-            <div className={styles.floor1} ref={floorImg1Ref}>
+            <div className={styles.floor1} ref={floorImg4Ref}>
               <img className={styles.floorImg} src={floor1} />
             </div>
-            <div className={styles.floor2} ref={floorImg2Ref}>
+            <div className={styles.floor2} ref={floorImg3Ref}>
               <img className={styles.floorImg} src={floor2} />
             </div>
-            <div className={styles.floor3} ref={floorImg3Ref}>
+            <div className={styles.floor3} ref={floorImg2Ref}>
               <img className={styles.floorImg} src={floor3} />
             </div>
-            <div className={styles.floor4} ref={floorImg4Ref}>
+            <div className={styles.floor4} ref={floorImg1Ref}>
               <img className={styles.floorImg} src={floor4} />
             </div>
           </div>

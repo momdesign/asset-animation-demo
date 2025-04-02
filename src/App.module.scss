@@ -48,7 +48,8 @@
 
 .sceneSection {
   position: relative;
-  padding-top: 710px + 40px;
+  // padding-top: 710px + 40px;
+  padding-top: 817px + 40px;
 }
 
 .sceneTrack {
@@ -78,7 +79,7 @@
 }
 
 .floor1 {
-  top: 0;
+  top: 360px;
 }
 
 .floor2 {
@@ -86,11 +87,11 @@
 }
 
 .floor3 {
-  top: 250px;
+  top: 100px;
 }
 
 .floor4 {
-  top: 340px;
+  top: 0px;
 }
 
 .floorImg {
