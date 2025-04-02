@@ -7,8 +7,6 @@ type Item = {
 
 const ANIMATION_DURATION_PX = 1080;
 const ANIMATION_DURATION_PX_MOBILE = 900;
-const X_OFFSET = 100;
-const X_OFFSET_MOBILE = 0;
 const Y_OFFSET = 0;
 const Y_OFFSET_MOBILE = -100;
 const SCALE = 0.8;
@@ -59,13 +57,11 @@ export function useImagesAnimation(
         const imgEl = image.querySelector('img');
         if (!imgEl) return;
         const scaleValue = isMobile ? SCALE_MOBILE : SCALE;
-        const xOffsetValue = isMobile ? X_OFFSET_MOBILE : X_OFFSET;
         const yOffsetValue = isMobile ? Y_OFFSET_MOBILE : Y_OFFSET;
         const imgHeight = imgEl.clientHeight;
         const imgCenter = imgRect.top + scroll + imgHeight / 2;
         const infoCenter = info.offsetTop + info.clientHeight / 2;
         const y = rangeMap(scroll, start, end, 0, infoCenter - imgCenter + yOffsetValue, true);
-        const x = rangeMap(scroll, start, end, 0, xOffsetValue, true);
         const scale = rangeMap(scroll, start, end, 1, scaleValue, true);
         imgEl.style.transform = `translate(${x}px, ${y}px) scale(${scale})`;
       });
