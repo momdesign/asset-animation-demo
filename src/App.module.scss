@@ -58,19 +58,18 @@
   letter-spacing: -0.045em;
 }
 
-.contentMock {
-  max-width: 1320px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 40px;
-  display: block;
-  position: relative;
-  z-index: 1;
-}
-
 .sceneSection {
   position: relative;
   padding-top: 817px + 40px;
+}
+
+.fullImgWrapper {
+  position: absolute;
+  top: 0px;
+}
+
+.fullImg {
+  max-width: 100%;
 }
 
 .sceneTrack {
@@ -89,6 +88,45 @@
   text-align: center;
   margin: 0 auto;
 }
+
+// overlay
+
+.overlayContentWrapper {
+  max-width: 1320px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+  display: block;
+  position: relative;
+  z-index: 1;
+  background-color: #B7E6FF;
+  color: #000;
+  padding: 90px 60px 65px 60px;
+  box-sizing: border-box;
+  background-image: url('./assets/overlay-bg-img.png');
+  background-size: 421px 384.5px;
+  background-position: 100% 0;
+  background-repeat: no-repeat;
+}
+
+.overlayTitle {
+  font-weight: 350;
+  font-size: 58px;
+  line-height: 1.1;
+  max-width: 600px;
+}
+
+.overlayText {
+  column-count: 2;
+  gap: 120px;
+}
+
+.overlayTextItem {
+  margin-top: 0;
+  margin-bottom: 64px;
+}
+
+// floors
 
 .floor1,
 .floor2,

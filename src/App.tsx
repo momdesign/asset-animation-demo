@@ -6,6 +6,7 @@ import floor1 from './assets/1floor.png';
 import floor2 from './assets/2floor.png';
 import floor3 from './assets/3floor.png';
 import floor4 from './assets/4floor.png';
+import fullImg from './assets/full.png';
 import pattern from './assets/pattern.png';
 import { useImagesAnimation } from './useImagesAnimation';
 
@@ -64,6 +65,9 @@ function App() {
       <section className={styles.sceneSection}>
         <div className={styles.sceneTrack}>
           <div className={styles.scene}>
+            <div className={styles.fullImgWrapper}>
+              <img src={fullImg} className={styles.fullImg} />
+            </div>
             <div className={styles.floor1} ref={floorImg4Ref}>
               <img className={styles.floorImg} src={floor1} />
             </div>
@@ -78,8 +82,16 @@ function App() {
             </div>
           </div>
         </div>
-        <div>
-          <img src={overlay1} className={styles.contentMock} />
+        <div className={styles.overlayContentWrapper}>
+          <h3 className={styles.overlayTitle}>
+            “AI-powered companies are gaining an edge—and redefining the rules of business.”
+          </h3>
+          <div className={styles.overlayText}>
+            <p className={styles.overlayTextItem}>Organizations of every size and across industries are using Copilot and agents to make big gains from their AI investments, bending the curve on innovation, reshaping business process, reinventing customer engagement, and enhancing employee productivity. Their stories offer a blueprint for every leader and organization looking to apply the transformative capabilities of AI.</p>
+            <p className={styles.overlayTextItem}>That’s why Amgen, one of the world’s leading biotechnology companies, created Catalyst Copilot, an agent that gives research and development staff instant access to a trove of insights—from curated knowledge and training videos to product databases, all organized by therapeutic area. “We’re creating an ecosystem where we’re learning together in real time,” says Bryan Yee, Executive Director of R&D Knowledge and Learning.</p>
+            <p className={styles.overlayTextItem}>Through natural-language conversations with Catalyst Copilot, staff across R&D can surface relevant knowledge and identify the right colleague for potential collaboration. No more digging through disparate data sources or wondering if a crucial piece of information is beyond reach.</p>
+            <p className={styles.overlayTextItem}>What are some of the potential regulatory pathways that could be considered for a new medicine? Catalyst Copilot knows. Catalyst Copilot is just one piece of Amgen’s overall strategy with Copilot and agents. It has rolled out more than 20,000 licenses across the company, with a focus on agents that help provide instant answers and support processes across the company. Even in the age of AI, the key to breakthrough science remains remarkably human: asking the right questions and pushing the boundaries of what’s possible.</p>
+          </div>
         </div>
       </section>
       <section className={styles.floorsSection} ref={floorsSectionRef}>
