@@ -43,14 +43,17 @@ function App() {
   return (
     <div>
       <section className={styles.hero}>
-        <div className={styles.note}>2025 Work Trend Index Report</div>
+        <div className={styles.note}>
+          2025 Work Trend Index Report
+        </div>
         <h2 className={styles.title}>
-          <span className={styles.bold}>2025:</span><br />
-          The Year the Frontier Firm is Born
+          <span className={styles.titleHighlight}>2025:</span><br />
+          The <span className={styles.kerningY}>Y</span>ear the Frontier Firm is Born
         </h2>
-        <button type="button" className={styles.button}>
-          Download the report
-        </button>
+        <a href="/" className={styles.buttonLink}>
+          Download Report
+          <span className={styles.buttonIcon}>↓</span>
+        </a>
       </section>
       <section className={styles.sceneSection}>
         <div className={styles.sceneTrack}>

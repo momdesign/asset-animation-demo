@@ -4,36 +4,52 @@
 
 .note {
   font-weight: 700;
-  margin-top: 40px;
+  margin-top: 38px;
 }
 
-.bold {
+.titleHighlight {
   font-weight: 700;
+  font-family: 'Segoe Pro Condensed';
 }
 
 .title {
   font-size: 114px;
-  line-height: 1;
-  max-width: 900px;
-  font-weight: 400;
+  line-height: 0.86;
+  max-width: 1024px;
+  font-weight: 300;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 40px;
-  margin-bottom: 40px;
+  margin-top: 30px;
+  margin-bottom: 60px;
+  letter-spacing: -0.05em;
 }
 
-.button {
+.buttonLink {
   background-color: white;
   color: #006CBF;
   border: none;
-  -webkit-appearance: none;
-  appearance: none;
-  font-size: 20px;
-  line-height: 1.6;
+  font-size: 22px;
   font-weight: 400;
   font-family: inherit;
-  padding: 10px 20px;
+  padding-left: 20px;
+  padding-right: 20px;
   margin-bottom: 80px;
+  font-weight: 600;
+  text-decoration: none;
+  height: 55px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttonIcon {
+  margin-left: 20px;
+  font-weight: 300;
+  font-size: 20px;
+}
+
+.kerningY {
+  letter-spacing: -0.045em;
 }
 
 .contentMock {
@@ -48,7 +64,6 @@
 
 .sceneSection {
   position: relative;
-  // padding-top: 710px + 40px;
   padding-top: 817px + 40px;
 }
 

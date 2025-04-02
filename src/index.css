@@ -12,15 +12,50 @@ body {
 }
 
 @font-face {
-  font-family: 'Segoe Pro';
+  font-family: 'Segoe Pro Condensed';
   src: url('/SegoePro-CondRegular.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Segoe Pro';
+  font-family: 'Segoe Pro Condensed';
   src: url('/SegoePro-CondBold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Segoe Pro';
+  src: url('/SegoePro-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Segoe Pro';
+  src: url('/SegoePro-Semilight.ttf') format('truetype');
+  font-weight: 350;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Segoe Pro';
+  src: url('/SegoePro-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Segoe Pro';
+  src: url('/SegoePro-Semibold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Segoe Pro';
+  src: url('/SegoePro-Bold.ttf') format('truetype');
   font-weight: 700;
   font-style: normal;
 }
