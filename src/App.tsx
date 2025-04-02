@@ -97,64 +97,72 @@ function App() {
       </section>
       <section className={styles.floorsSection} ref={floorsSectionRef}>
         <div className={styles.floorInfoItem} ref={floorInfo1Ref}>
-          <div className={styles.floorTitle}>
-            You can buy intelligence on tap
+          <div className={styles.floorInfoContent}>
+            <div className={styles.floorTitle}>
+              You can buy intelligence on tap
+            </div>
+            <div className={styles.floorDescription}>
+              Our research predicts that within the next 2-3 years, AI will break this paradigm and give way to 24/7 agentic workflows.
+            </div>
+            <a
+              href="/"
+              className={styles.floorCTA}
+            >
+              Jump to section
+            </a>
           </div>
-          <div className={styles.floorDescription}>
-            Our research predicts that within the next 2-3 years, AI will break this paradigm and give way to 24/7 agentic workflows.
-          </div>
-          <button
-            type="button"
-            className={cn(styles.button, styles.floorCTA)}
-          >
-            Jump to section
-          </button>
           <div className={styles.floorNumber}>01</div>
         </div>
         <div className={styles.floorInfoItem} ref={floorInfo2Ref}>
-          <div className={styles.floorTitle}>
-            Agents join the workforce
+          <div className={styles.floorInfoContent}>
+            <h4 className={styles.floorTitle}>
+              Agents join the workforce
+            </h4>
+            <div className={styles.floorDescription}>
+              The human-agent ratio will become a key business indicator, varying by industry, role, and task.
+            </div>
+            <a
+              href="/"
+              className={styles.floorCTA}
+            >
+              Jump to section
+            </a>
           </div>
-          <div className={styles.floorDescription}>
-            The human-agent ratio will become a key business indicator, varying by industry, role, and task.
-          </div>
-          <button
-            type="button"
-            className={cn(styles.button, styles.floorCTA)}
-          >
-            Jump to section
-          </button>
           <div className={styles.floorNumber}>02</div>
         </div>
         <div className={styles.floorInfoItem} ref={floorInfo3Ref}>
-          <div className={styles.floorTitle}>
-            The org chart goes obsolete
+          <div className={styles.floorInfoContent}>
+            <h4 className={styles.floorTitle}>
+              The org chart goes obsolete
+            </h4>
+            <div className={styles.floorDescription}>
+              AI and autonomous agents will require management just like human employees, driving the need for new roles and oversight systems.
+            </div>
+            <a
+              href="/"
+              className={styles.floorCTA}
+            >
+              Jump to section
+            </a>
           </div>
-          <div className={styles.floorDescription}>
-            AI and autonomous agents will require management just like human employees, driving the need for new roles and oversight systems.
-          </div>
-          <button
-            type="button"
-            className={cn(styles.button, styles.floorCTA)}
-          >
-            Jump to section
-          </button>
-          <div className={styles.floorNumber}>02</div>
+          <div className={styles.floorNumber}>03</div>
         </div>
         <div className={styles.floorInfoItem} ref={floorInfo4Ref}>
-          <div className={styles.floorTitle}>
-            The Path Forward
+          <div className={styles.floorInfoContent}>
+            <h4 className={styles.floorTitle}>
+              The Path Forward
+            </h4>
+            <div className={styles.floorDescription}>
+              The pain in reinvention lies in the challenge of imagining the unimaginable.
+            </div>
+            <a
+              href="/"
+              className={styles.floorCTA}
+            >
+              Jump to section
+            </a>
           </div>
-          <div className={styles.floorDescription}>
-            The pain in reinvention lies in the challenge of imagining the unimaginable.
-          </div>
-          <button
-            type="button"
-            className={cn(styles.button, styles.floorCTA)}
-          >
-            Jump to section
-          </button>
-          <div className={styles.floorNumber}>02</div>
+          <div className={styles.floorNumber}>04</div>
         </div>
       </section>
     </div>
