@@ -5,10 +5,12 @@ type Item = {
   infoRef: React.RefObject<HTMLDivElement | null>;
 }
 
-const ANIMATION_DURATION_PX = 900;
+const ANIMATION_DURATION_PX = 1080;
 
 export function useImagesAnimation(
   parentRef: React.RefObject<HTMLDivElement | null>,
+  overlayRef: React.RefObject<HTMLDivElement | null>,
+  fullImgRef: React.RefObject<HTMLImageElement | null>,
   items: Item[]
 ) {
   const frame = useRef<number | null>(null);
@@ -17,7 +19,28 @@ export function useImagesAnimation(
     if (!parent) return;
     const animate = () => {
       const parentTop = parent.offsetTop;
+      const scroll = window.scrollY;
       const [start, end] = [parentTop - ANIMATION_DURATION_PX, parentTop];
+      const overlayRect = overlayRef?.current?.getBoundingClientRect();
+      const overlayTop = (overlayRect?.top ?? 0) - window.scrollY;
+      const isPastOverlay = overlayTop + scroll < 0;
+      if (isPastOverlay) {
+        fullImgRef.current?.style.setProperty('opacity', '0');
+        items.forEach((item) => {
+          const { imageRef } = item;
+          const image = imageRef?.current;
+          if (!image) return;
+          image.style.setProperty('opacity', '1');
+        });
+      } else {
+        fullImgRef.current?.style.setProperty('opacity', '1');
+        items.forEach((item) => {
+          const { imageRef } = item;
+          const image = imageRef?.current;
+          if (!image) return;
+          image.style.setProperty('opacity', '0');
+        });
+      }
       items.forEach((item) => {
         const { imageRef, infoRef } = item;
         const image = imageRef?.current;
@@ -27,10 +50,10 @@ export function useImagesAnimation(
         const imgEl = image.querySelector('img');
         if (!imgEl) return;
         const imgHeight = imgEl.clientHeight;
-        const imgCenter = imgRect.top + window.scrollY + imgHeight / 2;
+        const imgCenter = imgRect.top + scroll + imgHeight / 2;
         const infoCenter = info.offsetTop + info.clientHeight / 2;
-        const y = rangeMap(window.scrollY, start, end, 0, infoCenter - imgCenter, true);
-        const scale = rangeMap(window.scrollY, start, end, 1, 0.8, true);
+        const y = rangeMap(scroll, start, end, 0, infoCenter - imgCenter, true);
+        const scale = rangeMap(scroll, start, end, 1, 0.8, true);
         imgEl.style.transform = `translateY(${y}px) scale(${scale})`;
       });
       requestAnimationFrame(animate);

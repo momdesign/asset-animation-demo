@@ -1,7 +1,6 @@
 import { useRef } from 'react';
 import cn from 'classnames';
 import styles from './App.module.scss';
-import overlay1 from './assets/overlay-1.jpg';
 import floor1 from './assets/1floor.png';
 import floor2 from './assets/2floor.png';
 import floor3 from './assets/3floor.png';
@@ -21,9 +20,11 @@ function App() {
   const floorInfo3Ref = useRef<HTMLDivElement>(null);
   const floorInfo4Ref = useRef<HTMLDivElement>(null);
 
+  const fullImgRef = useRef<HTMLImageElement>(null);
   const floorsSectionRef = useRef<HTMLDivElement>(null);
+  const overlayRef = useRef<HTMLDivElement>(null);
 
-  useImagesAnimation(floorsSectionRef, [
+  useImagesAnimation(floorsSectionRef, overlayRef, fullImgRef, [
     {
       imageRef: floorImg1Ref,
       infoRef: floorInfo1Ref,
@@ -65,7 +66,7 @@ function App() {
       <section className={styles.sceneSection}>
         <div className={styles.sceneTrack}>
           <div className={styles.scene}>
-            <div className={styles.fullImgWrapper}>
+            <div className={styles.fullImgWrapper} ref={fullImgRef}>
               <img src={fullImg} className={styles.fullImg} />
             </div>
             <div className={styles.floor1} ref={floorImg4Ref}>
@@ -82,7 +83,7 @@ function App() {
             </div>
           </div>
         </div>
-        <div className={styles.overlayContentWrapper}>
+        <div className={styles.overlayContentWrapper} ref={overlayRef}>
           <h3 className={styles.overlayTitle}>
             “AI-powered companies are gaining an edge—and redefining the rules of business.”
           </h3>
