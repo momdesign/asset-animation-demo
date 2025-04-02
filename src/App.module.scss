@@ -1,10 +1,16 @@
+.app {
+  background-size: 80px 80px;
+  background-position: 0 0;
+  background-repeat: repeat;
+}
+
 .hero {
   text-align: center;
+  padding-top: 38px;
 }
 
 .note {
   font-weight: 700;
-  margin-top: 38px;
 }
 
 .titleHighlight {

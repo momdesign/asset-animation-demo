@@ -6,6 +6,7 @@ import floor1 from './assets/1floor.png';
 import floor2 from './assets/2floor.png';
 import floor3 from './assets/3floor.png';
 import floor4 from './assets/4floor.png';
+import pattern from './assets/pattern.png';
 import { useImagesAnimation } from './useImagesAnimation';
 
 function App() {
@@ -41,7 +42,12 @@ function App() {
   ]);
 
   return (
-    <div>
+    <div
+      className={styles.app}
+      style={{
+        backgroundImage: `url(${pattern})`,
+      }}
+    >
       <section className={styles.hero}>
         <div className={styles.note}>
           2025 Work Trend Index Report
