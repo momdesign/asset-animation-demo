@@ -6,6 +6,7 @@ type Item = {
 }
 
 const ANIMATION_DURATION_PX = 1080;
+const ANIMATION_DURATION_PX_MOBILE = 900;
 const X_OFFSET = 100;
 const X_OFFSET_MOBILE = 0;
 const Y_OFFSET = 0;
@@ -27,7 +28,8 @@ export function useImagesAnimation(
       const isMobile = window.innerWidth < 1024;
       const parentTop = parent.offsetTop;
       const scroll = window.scrollY;
-      const [start, end] = [parentTop - ANIMATION_DURATION_PX, parentTop];
+      const duration = isMobile ? ANIMATION_DURATION_PX_MOBILE : ANIMATION_DURATION_PX;
+      const [start, end] = [parentTop - duration, parentTop];
       const overlayRect = overlayRef?.current?.getBoundingClientRect();
       const overlayTop = (overlayRect?.top ?? 0) - window.scrollY;
       const isPastOverlay = overlayTop + scroll < 0;

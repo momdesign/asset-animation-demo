@@ -132,9 +132,12 @@ $PADDING_TABLET: 56px;
   position: sticky;
   height: 0; // required to make the sticky stop when the top of content meets the end of track, not the bottom
   top: 0;
-  max-width: 1024px;
+  max-width: 740px;
   text-align: center;
   margin: 0 auto;
+  @include desktop {
+    max-width: 1024px;
+  }
 }
 
 // overlay
