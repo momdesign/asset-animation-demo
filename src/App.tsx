@@ -7,6 +7,10 @@ import floor4 from './assets/4floor.png';
 import fullImg from './assets/full.png';
 import pattern from './assets/pattern.png';
 import { useImagesAnimation } from './useImagesAnimation';
+import linkedin from './assets/linkedin.svg';
+import x from './assets/x.svg';
+import facebook from './assets/facebook.svg';
+import link from './assets/link.svg';
 
 function App() {
   const floorImg1Ref = useRef<HTMLImageElement>(null);
@@ -61,6 +65,13 @@ function App() {
           Download Report
           <span className={styles.buttonIcon}>↓</span>
         </a>
+        <div className={styles.shareWrapper}>
+          <div className={styles.shareLabel}>Share</div>
+          <img src={linkedin} />
+          <img src={x} />
+          <img src={facebook} />
+          <img src={link} />
+        </div>
       </section>
       <section className={styles.sceneSection}>
         <div className={styles.sceneTrack}>

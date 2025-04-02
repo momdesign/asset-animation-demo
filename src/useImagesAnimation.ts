@@ -6,6 +6,12 @@ type Item = {
 }
 
 const ANIMATION_DURATION_PX = 1080;
+const X_OFFSET = 100;
+const X_OFFSET_MOBILE = 0;
+const Y_OFFSET = 0;
+const Y_OFFSET_MOBILE = -100;
+const SCALE = 0.8;
+const SCALE_MOBILE = 1;
 
 export function useImagesAnimation(
   parentRef: React.RefObject<HTMLDivElement | null>,
@@ -18,6 +24,7 @@ export function useImagesAnimation(
     const parent = parentRef?.current;
     if (!parent) return;
     const animate = () => {
+      const isMobile = window.innerWidth < 1024;
       const parentTop = parent.offsetTop;
       const scroll = window.scrollY;
       const [start, end] = [parentTop - ANIMATION_DURATION_PX, parentTop];
@@ -49,12 +56,16 @@ export function useImagesAnimation(
         const imgRect = image.getBoundingClientRect();
         const imgEl = image.querySelector('img');
         if (!imgEl) return;
+        const scaleValue = isMobile ? SCALE_MOBILE : SCALE;
+        const xOffsetValue = isMobile ? X_OFFSET_MOBILE : X_OFFSET;
+        const yOffsetValue = isMobile ? Y_OFFSET_MOBILE : Y_OFFSET;
         const imgHeight = imgEl.clientHeight;
         const imgCenter = imgRect.top + scroll + imgHeight / 2;
         const infoCenter = info.offsetTop + info.clientHeight / 2;
-        const y = rangeMap(scroll, start, end, 0, infoCenter - imgCenter, true);
-        const scale = rangeMap(scroll, start, end, 1, 0.8, true);
-        imgEl.style.transform = `translateY(${y}px) scale(${scale})`;
+        const y = rangeMap(scroll, start, end, 0, infoCenter - imgCenter + yOffsetValue, true);
+        const x = rangeMap(scroll, start, end, 0, xOffsetValue, true);
+        const scale = rangeMap(scroll, start, end, 1, scaleValue, true);
+        imgEl.style.transform = `translate(${x}px, ${y}px) scale(${scale})`;
       });
       requestAnimationFrame(animate);
     };
