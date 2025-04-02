@@ -1,5 +1,4 @@
 import { useRef } from 'react';
-import cn from 'classnames';
 import styles from './App.module.scss';
 import floor1 from './assets/1floor.png';
 import floor2 from './assets/2floor.png';
