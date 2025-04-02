@@ -63,7 +63,7 @@ export function useImagesAnimation(
         const infoCenter = info.offsetTop + info.clientHeight / 2;
         const y = rangeMap(scroll, start, end, 0, infoCenter - imgCenter + yOffsetValue, true);
         const scale = rangeMap(scroll, start, end, 1, scaleValue, true);
-        imgEl.style.transform = `translate(${x}px, ${y}px) scale(${scale})`;
+        imgEl.style.transform = `translateY(${y}px) scale(${scale})`;
       });
       requestAnimationFrame(animate);
     };

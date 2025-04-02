@@ -205,6 +205,9 @@ $PADDING_TABLET: 56px;
   position: absolute;
   left: 0;
   width: 100%;
+  @include desktop {
+    left: 100px;
+  }
 }
 
 .floor1 {
